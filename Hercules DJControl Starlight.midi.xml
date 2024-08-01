@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MixxxMIDIPreset mixxxVersion="2.2" schemaVersion="1">
     <info>
-        <name>Hercules DJControl Starlight</name>
+        <name>Hercules DJControl Starlight Custom</name>
         <author>DJ Phatso for Hercules Technical Support, contributions by Kerrick Staley</author>
         <description>MIDI Preset for Hercules DJControl Starlight</description>
         <forums>https://mixxx.discourse.group/t/hercules-djcontrol-starlight/17833</forums>
@@ -202,7 +202,7 @@
         // Sync
             <control>
                 <group>[Channel1]</group>
-                <key>sync_master</key>
+                <key>sync_leader</key>
                 <description>SHIFT + Sync: Sync Master</description>
                 <status>0x94</status>
                 <midino>0x05</midino>
@@ -278,7 +278,7 @@
         // Sync
             <control>
                 <group>[Channel2]</group>
-                <key>sync_master</key>
+                <key>sync_leader</key>
                 <description>SHIFT + Sync: Sync Master</description>
                 <status>0x95</status>
                 <midino>0x05</midino>
@@ -981,6 +981,16 @@
                     <normal/>
                 </options>
             </control>
+            <control>
+                <group>[EqualizerRack1_[Channel1]_Effect1]</group>
+                <key>parameter2</key>
+                <description>EQ LOW Deck A</description>
+                <status>0xB4</status>
+                <midino>0x02</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
 
         // Filter
             <control>
@@ -1078,6 +1088,17 @@
                     <normal/>
                 </options>
             </control>
+            <control>
+                <group>[EqualizerRack1_[Channel2]_Effect1]</group>
+                <key>parameter2</key>
+                <description>EQ LOW Deck B</description>
+                <status>0xB5</status>
+                <midino>0x02</midino>
+                <options>
+                    <normal/>
+                </options>
+            </control>
+
 
         // Filter
             <control>
@@ -1195,7 +1216,7 @@
 
             <output>
                 <group>[Channel1]</group>
-                <key>sync_master</key>
+                <key>sync_leader</key>
                 <description>SYNC LED Deck A(SHIFT mode)</description>
                 <minimum>0.5</minimum>
                 <maximum>1</maximum>
@@ -1243,7 +1264,7 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>sync_master</key>
+                <key>sync_leader</key>
                 <description>SYNC LED Deck B(SHIFT mode)</description>
                 <minimum>0.5</minimum>
                 <maximum>1</maximum>
@@ -1282,7 +1303,7 @@
         // LED HOT CUE (Normal Mode)
             <output>
                 <group>[Channel1]</group>
-                <key>hotcue_1_enabled</key>
+                <key>hotcue_1_status</key>
                 <description>Hotcue 1 (Pad 1)</description>
                 <status>0x96</status>
                 <midino>0x00</midino>
@@ -1292,7 +1313,7 @@
 
             <output>
                 <group>[Channel1]</group>
-                <key>hotcue_2_enabled</key>
+                <key>hotcue_2_status</key>
                 <description>Hotcue 2 (Pad 2)</description>
                 <status>0x96</status>
                 <midino>0x01</midino>
@@ -1302,7 +1323,7 @@
 
             <output>
                 <group>[Channel1]</group>
-                <key>hotcue_3_enabled</key>
+                <key>hotcue_3_status</key>
                 <description>Hotcue 3 (Pad 3)</description>
                 <status>0x96</status>
                 <midino>0x02</midino>
@@ -1312,7 +1333,7 @@
 
             <output>
                 <group>[Channel1]</group>
-                <key>hotcue_4_enabled</key>
+                <key>hotcue_4_status</key>
                 <description>Hotcue 4 (Pad 4)</description>
                 <status>0x96</status>
                 <midino>0x03</midino>
@@ -1323,7 +1344,7 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>hotcue_1_enabled</key>
+                <key>hotcue_1_status</key>
                 <description>Hotcue 1 (Pad 1)</description>
                 <status>0x97</status>
                 <midino>0x00</midino>
@@ -1333,7 +1354,7 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>hotcue_2_enabled</key>
+                <key>hotcue_2_status</key>
                 <description>Hotcue 2 (Pad 2)</description>
                 <status>0x97</status>
                 <midino>0x01</midino>
@@ -1343,7 +1364,7 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>hotcue_3_enabled</key>
+                <key>hotcue_3_status</key>
                 <description>Hotcue 3 (Pad 3)</description>
                 <status>0x97</status>
                 <midino>0x02</midino>
@@ -1353,7 +1374,7 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>hotcue_4_enabled</key>
+                <key>hotcue_4_status</key>
                 <description>Hotcue 4 (Pad 4)</description>
                 <status>0x97</status>
                 <midino>0x03</midino>
@@ -1364,8 +1385,8 @@
         // LED HOT CUE (SHIFT Mode)
             <output>
                 <group>[Channel1]</group>
-                <key>hotcue_1_enabled</key>
-                <description>Hotcue 1 (Pad 1)</description>
+                <key>hotcue_5_status</key>
+                <description>Hotcue 5 (Pad 1)</description>
                 <status>0x96</status>
                 <midino>0x08</midino>
                 <on>0x7E</on>
@@ -1374,8 +1395,8 @@
 
             <output>
                 <group>[Channel1]</group>
-                <key>hotcue_2_enabled</key>
-                <description>Hotcue 2 (Pad 2)</description>
+                <key>hotcue_6_status</key>
+                <description>Hotcue 6 (Pad 2)</description>
                 <status>0x96</status>
                 <midino>0x09</midino>
                 <on>0x7E</on>
@@ -1384,8 +1405,8 @@
 
             <output>
                 <group>[Channel1]</group>
-                <key>hotcue_3_enabled</key>
-                <description>Hotcue 3 (Pad 3)</description>
+                <key>hotcue_7_status</key>
+                <description>Hotcue 7 (Pad 3)</description>
                 <status>0x96</status>
                 <midino>0x0A</midino>
                 <on>0x7E</on>
@@ -1394,8 +1415,8 @@
 
             <output>
                 <group>[Channel1]</group>
-                <key>hotcue_4_enabled</key>
-                <description>Hotcue 4 (Pad 4)</description>
+                <key>hotcue_8_status</key>
+                <description>Hotcue 8 (Pad 4)</description>
                 <status>0x96</status>
                 <midino>0x0B</midino>
                 <on>0x7E</on>
@@ -1405,8 +1426,8 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>hotcue_1_enabled</key>
-                <description>Hotcue 1 (Pad 1)</description>
+                <key>hotcue_5_status</key>
+                <description>Hotcue 5 (Pad 1)</description>
                 <status>0x97</status>
                 <midino>0x08</midino>
                 <on>0x7E</on>
@@ -1415,8 +1436,8 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>hotcue_2_enabled</key>
-                <description>Hotcue 2 (Pad 2)</description>
+                <key>hotcue_6_status</key>
+                <description>Hotcue 6 (Pad 2)</description>
                 <status>0x97</status>
                 <midino>0x09</midino>
                 <on>0x7E</on>
@@ -1425,8 +1446,8 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>hotcue_3_enabled</key>
-                <description>Hotcue 3 (Pad 3)</description>
+                <key>hotcue_7_status</key>
+                <description>Hotcue 7 (Pad 3)</description>
                 <status>0x97</status>
                 <midino>0x0A</midino>
                 <on>0x7E</on>
@@ -1435,8 +1456,8 @@
 
             <output>
                 <group>[Channel2]</group>
-                <key>hotcue_4_enabled</key>
-                <description>Hotcue 4 (Pad 4)</description>
+                <key>hotcue_8_status</key>
+                <description>Hotcue 8 (Pad 4)</description>
                 <status>0x97</status>
                 <midino>0x0B</midino>
                 <on>0x7E</on>

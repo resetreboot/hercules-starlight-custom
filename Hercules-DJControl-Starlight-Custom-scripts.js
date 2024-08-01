@@ -88,8 +88,8 @@ DJCStarlight.init = function() {
     midi.sendShortMsg(0x91, 0x03, 0x7F);
 
     // Connect the base LEDs
-    engine.connectControl("[Channel1]","VuMeterL","DJCStarlight.baseLEDUpdate");
-    engine.connectControl("[Channel2]","VuMeterR","DJCStarlight.baseLEDUpdate");
+    engine.makeConnection("[Channel1]", "vu_meter_left", "DJCStarlight.baseLEDUpdate");
+    engine.makeConnection("[Channel2]", "vu_meter_right", "DJCStarlight.baseLEDUpdate");
 
     // Set effects Levels - Dry/Wet
     engine.setParameter("[EffectRack1_EffectUnit1_Effect1]", "meta", 0.6);
